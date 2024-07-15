@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="От къде сте?"></label>
+    <select name="town" id="town">
+        <option value="София">София</option>
+        <option value="Париж">Париж</option>
+        <option value="Лондон">Лондон</option>
+    </select>
+    <button onclick="greetings();">OK</button>
+
+    <script>
+    function greetings() {
+    let userTown = document.getElementById("town").value;
+    console.log(userTown)
+        
+            if (userTown === "София") {
+                console.log(`Здравей!`);
+            } else if (userTown === "Париж") {
+                console.log(`Salut!`);
+            } else {
+                console.log(`Hi!`)
+            }
+
+        }
+    </script>
+    </body>
+    </html>
