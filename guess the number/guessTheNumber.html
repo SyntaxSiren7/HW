@@ -10,29 +10,7 @@
 
 <body>
 
-    <script>
-        let userNumber = prompt('Enter a number')*1
-
-        generatedNumber = Math.round(Math.random() * 100);
-        let attempts = 0;
-
-        while (userNumber !== generatedNumber) {
-
-            attempts++
-            if (userNumber < generatedNumber) {
-                alert(`The number is greater than ${userNumber}`);
-            } else if (userNumber > generatedNumber) {
-                alert(`The number is smaller than ${userNumber}`);
-
-            } else {
-                alert(`Congradulations, you have succeseded after ${attempts} attempts!`)
-                break;
-            }
-
-            userNumber = prompt('Enter a number')
-        }
-    </script>
-      
+   <script src="./guess.js"></script>
 
 </body>
 </html>
