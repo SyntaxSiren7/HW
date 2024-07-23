@@ -23,12 +23,12 @@ let answers = [
 let output = ""
 
 
-for(let i = 0; i< questions.length; i++){
+for (let i = 0; i < questions.length; i++) {
     let question = questions[i];
-    output +=`${question} (${answers[i]})\n\t`;
-    
-let optionForQuestion = options[i];
-output+=`${optionForQuestion}\n`
+    output += `${question} (${answers[i]})\n\t`;
+
+    let optionForQuestion = options[i];
+    output += `${optionForQuestion}\n`
 
 }
 
