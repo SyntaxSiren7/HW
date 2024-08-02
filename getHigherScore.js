@@ -9,7 +9,7 @@ function getHighestScoreIndex(x, y) {
             maxIndex = i
         }
     }
-    console.log(`${students[2]} has the highest score ${maxNum}`)
+    console.log(`${students[maxIndex]} has the highest score ${maxNum}`)
     return maxIndex;
 
 }
