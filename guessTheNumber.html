@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #gameField {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0.3em;
+        border: 1px dotted #999;
+    }
+
+    #output {
+        min-height: 1em;
+        margin: 1em 0 0 0;
+        padding: 0.5em;
+        background: inherit;
+    }
+</style>
+
+<body>
+    <div id="gameField">
+        <p>Познайте числото, което съм си намислил [от 0 до 100]:</p>
+        <input type="number" id="userNumber"><button>OK</button>
+        <div id="output"></div>
+    </div>
+    <script>var myNumber = Math.floor(Math.random() * 100);
+        let count = 0;
+        var outputNode = document.getElementById("output");
+        var btnNode = document.getElementsByTagName("button")[0];
+        btnNode.addEventListener("click", guessNumber);
+        function guessNumber() {
+            let userNumber = document.getElementById('userNumber').value * 1
+            if (userNumber > myNumber) {
+                outputNode.innerHTML = "Не познахте: Надолу!"
+                outputNode.style.backgroundColor = "red"
+                count++
+            } else if (userNumber === myNumber) {
+                outputNode.innerHTML = `Браво, познахте от ${count}-я път!`;
+                outputNode.style.backgroundColor = "red";
+            } else {
+                outputNode.innerHTML = "Не познахте: Нагоре!"
+                outputNode.style.backgroundColor = 'red';
+                count++;
+            }
+        }
+    </script>
+</body>
+
+</html>

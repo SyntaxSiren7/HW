@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <ul>
+         <li>Item 1</li>
+         <li>Item 2</li>
+         <li>Item 3</li>
+         <li>Item 4</li>
+         <li>Item 5</li>
+        </ul>
+       </header>
+       <main>
+        <ul>
+         <li>Item 1</li>
+         <li>Item 2</li>
+         <li id="change-color">Am I green or am I red?</li>
+         <li>Item 4</li>
+         <li>Item 5</li>
+        </ul>
+       </main>
+       <button id="btn">Change color</button>
+
+</body>
+<script>
+
+var li3Node = document.querySelector("main>ul>li:nth-child(3)");
+console.dir(li3Node);
+li3Node.style.color = "red";
+    function changeBtn(){
+       if (li3Node.style.color === 'red'){
+        li3Node.style.color ='green';
+       } else {
+        li3Node.style.color = 'red';
+       }
+        
+    }
+  let changeButton = document.getElementById('btn');
+  let li = document.getElementById('change-color');
+ 
+  changeButton.addEventListener('click',changeBtn);
+ 
+
+</script>
+</html>
